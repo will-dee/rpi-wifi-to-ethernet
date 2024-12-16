@@ -1,0 +1,11 @@
+[Unit]
+Description=Run dnsmasq as a DHCP server
+After=establish-nat.sh
+Requires=establish-nat.sh
+
+[Service]
+Type=simple
+ExecStart=/opt/dnsmasq-dhcp/bin/dnsmasq-dhcp.sh
+
+[Install]
+WantedBy=multi-user.target

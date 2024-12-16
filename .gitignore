@@ -1,0 +1,5 @@
+root/boot/userconf.txt
+output-arm-image
+output-raspbian_lite_64
+packer_cache
+crash.log

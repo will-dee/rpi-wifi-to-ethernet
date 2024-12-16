@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup the NAT rules
+After=setup-net.service network-online.target
+Requires=setup-net.service network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/establish-nat/bin/establish-nat.sh
+
+[Install]
+WantedBy=multi-user.target

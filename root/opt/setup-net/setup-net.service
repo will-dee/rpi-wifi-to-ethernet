@@ -1,0 +1,10 @@
+[Unit]
+Description=Setup the network adapters
+Before=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/setup-net/bin/setup-net.sh
+
+[Install]
+WantedBy=network-online.target

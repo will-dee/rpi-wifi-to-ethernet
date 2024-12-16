@@ -1,0 +1,10 @@
+[Unit]
+Description=Setup the wifi connection with credentials from /boot/wifi
+Before=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/setup-wifi/bin/setup-wifi.sh
+
+[Install]
+WantedBy=network-online.target
